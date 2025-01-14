@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION["username"] = $username;
             $_SESSION["name"] = $row["name"];
             $_SESSION["role"] = $row["role"];
-            $_SESSION["user_id"] = $row["user_id"]
+            $_SESSION["user_id"] = $row["user_id"];
 
             $_SESSION['notification'] = [
                 'type' => 'primary',
@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             ];
 
             header('Location: ../dasboard.php');
-            exit():
+            exit();
 
         } else {
             $_SESSION['notification'] = [
