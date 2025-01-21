@@ -15,7 +15,7 @@ if (isset($_POST['simpan'])) {
     $imagePath = $imageDir . basename($imageName);
 
     if (move_uploaded_file($_FILES["image"]["tmp_name"], $imagePath)) {
-        $query = "$INSERT INTO posts (post_title, content, created_at, category_id, user_id, image_path) values ('$postTitle', '$content', NOW( ), $categoryId, $userId, '$imagePath')";
+        $query = "INSERT INTO posts (post_title, content, created_at, category_id, user_id, image_path) values ('$postTitle', '$content', NOW(), $categoryId, $userId, '$imagePath')";
         if ($conn->query($query) === TRUE) {
             $_SESSION['notification'] = [
                 'type' => 'primary',
