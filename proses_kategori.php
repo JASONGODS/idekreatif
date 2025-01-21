@@ -40,7 +40,7 @@ if (isset($_POST['delete'])) {
 
         ];
     }
-    header('Location: kategori.php')
+    header('Location: kategori.php');
     exit();
 }
 if (isset($_POST['update'])) {
@@ -61,6 +61,6 @@ if (isset($_POST['update'])) {
             'message' => 'Gagal memperbarui kategori: ' . mysqli_error($conn)
         ];
     }
-    header('Location: kategori.php')
+    header('Location: kategori.php');
     exit();
 }
