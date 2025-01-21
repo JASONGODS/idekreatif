@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             
             ];
 
-            header('Location: ../dasboard.php');
+            header('Location: ../dashboard.php');
             exit();
 
         } else {
