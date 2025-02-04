@@ -28,7 +28,7 @@ include '.includes/toast_notification.php';
                         $query = "SELECT posts.*, users.name as user_name,
                         categories.category_name FROM posts
                         INNER JOIN users ON posts.user_id = users.user_id
-                        LEFT JOIN categories ON posts.category.id = categories.category_id
+                        LEFT JOIN categories ON posts.category_id = categories.category_id
                         WHERE posts.user_id = $userId";
 
                         $exec = mysqli_query($conn, $query);
